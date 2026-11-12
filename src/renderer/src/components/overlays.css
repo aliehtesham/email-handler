@@ -1,0 +1,138 @@
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--scrim);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.dialog {
+  border-radius: var(--shape-xl);
+  width: min(460px, calc(100vw - 48px));
+  max-height: min(82vh, 720px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dialog-wide {
+  width: min(680px, calc(100vw - 48px));
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px 8px;
+}
+
+.dialog-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--md-primary) 16%, transparent);
+  color: var(--md-primary);
+  flex-shrink: 0;
+}
+
+.dialog-title {
+  font-size: 19px;
+  font-weight: 700;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dialog-body {
+  padding: 8px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px 20px;
+}
+
+/* ---------- menu ---------- */
+
+.menu {
+  position: fixed;
+  z-index: 120;
+  min-width: 200px;
+  border-radius: var(--shape-lg);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--shape-sm);
+  font-size: 14px;
+  color: var(--md-on-surface);
+  text-align: left;
+  transition: background-color var(--speed-fast);
+}
+
+.menu-item:hover {
+  background: color-mix(in srgb, var(--md-on-surface) 8%, transparent);
+}
+
+.menu-item-danger {
+  color: var(--md-error);
+}
+
+.menu-item-danger:hover {
+  background: color-mix(in srgb, var(--md-error) 12%, transparent);
+}
+
+/* ---------- snackbar ---------- */
+
+.snacks {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.snack {
+  border-radius: var(--shape-full);
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 560px;
+}
+
+.snack-success {
+  color: var(--md-on-primary-container);
+  background: color-mix(in srgb, var(--md-primary-container) 92%, transparent);
+}
+
+.snack-error {
+  color: var(--md-on-error-container);
+  background: color-mix(in srgb, var(--md-error-container) 92%, transparent);
+}

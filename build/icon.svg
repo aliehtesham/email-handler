@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B7CF8"/>
+      <stop offset="0.55" stop-color="#A766EC"/>
+      <stop offset="1" stop-color="#E0559F"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rounded squircle tile -->
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#bg)"/>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#gloss)"/>
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- envelope -->
+  <rect x="15" y="22.5" width="34" height="24.5" rx="6.5" fill="#ffffff"/>
+  <path d="M17.5 26.5 32 38.5 46.5 26.5" fill="none" stroke="#5B49D6" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- generation sparkle -->
+  <path d="M50.5 7.5 52.4 13.1 58 15 52.4 16.9 50.5 22.5 48.6 16.9 43 15 48.6 13.1 Z" fill="#ffffff" opacity="0.96"/>
+</svg>
